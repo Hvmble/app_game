@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+    background-color: $first-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    font-family: $open-sans;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: $open-sans;
+    font-weight: 300;
+}
+
+// Base styles
+.card {
+    padding: 8px;
+    .menu-content {
+        @include cf;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            color: $white;
+        }
+
+        span {
+            position: absolute;
+            left: 50%;
+            top: -7px;
+            font-size: 10px;
+            font-weight: 700;
+            font-family: 'Open Sans';
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .wrapper {
+        background-color: $white;
+        min-height: 300px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+
+        &:hover {
+            
+            .data {
+                transform: translateY(0);
+                background-color: #08c0d189;
+                
+            }
+            .title {
+                display: block;
+                font-size: 25px;
+                font-weight: 400;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .data {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(calc(70px + 1em));
+        transition: transform 0.3s;
+        
+
+        .content {
+            padding: 1em;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .author {
+        font-size: 12px;
+    }
+
+    .title {
+        display: none;
+        font-size: 25px;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+    .text {
+        height: 70px;
+        margin: 0;
+    }
+
+    input[type='checkbox'] {
+        display: none;
+    }
+
+    input[type='checkbox']:checked+.menu-content {
+        transform: translateY(-60px);
+    }
+}
