@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from '../../components/Card';
+import { Search } from '../../components/Search';
 
 export const Cards = ({ games }) => {
+  const [search, setSearch] = useState("");
+  const searcher = (e) => {
+    setSearch(e.target.value);
+  }
 
-  console.log(games);
+  const results = !search ? games : games.filter((dato) => dato.title.toLowerCase().includes(search.toLocaleLowerCase()))
+
   return (
-    <div className='row'>
-      {games.map((game) => {
-        return <Card key={game.id} game={game} />;
-      })}
-    </div>
+    <>
+      <Search search={search} change={searcher}></Search>
+      <div className='row'>
+        {results.map((game) => {
+          return <Card key={game.id} game={game} />;
+        })}
+      </div>
+    </>
   );
 };
