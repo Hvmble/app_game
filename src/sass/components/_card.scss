@@ -1,5 +1,10 @@
 .container-card {
     .wrapper {
+        border-radius: 13px 13px 13px 13px;
+        -moz-border-radius: 13px 13px 13px 13px;
+        -webkit-border-radius: 13px 13px 13px 13px;
+        border: 1px double #08c0d1;
+
         .date {
             position: absolute;
             top: 0;

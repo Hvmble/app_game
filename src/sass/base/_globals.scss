@@ -20,6 +20,7 @@ h1 {
 // Base styles
 .card {
     padding: 8px;
+
     .menu-content {
         @include cf;
         margin: 0;
@@ -40,25 +41,25 @@ h1 {
             top: -7px;
             font-size: 10px;
             font-weight: 700;
-            font-family: 'Open Sans';
+            font-family: "Open Sans";
             transform: translate(-50%, 0);
         }
     }
 
     .wrapper {
         background-color: $white;
-        min-height: 300px;
+        min-height: 260px;
+        width: 400px;
         position: relative;
         overflow: hidden;
         box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
 
         &:hover {
-            
             .data {
                 transform: translateY(0);
                 background-color: #08c0d189;
-                
             }
+
             .title {
                 display: block;
                 font-size: 25px;
@@ -74,7 +75,6 @@ h1 {
         width: 100%;
         transform: translateY(calc(70px + 1em));
         transition: transform 0.3s;
-        
 
         .content {
             padding: 1em;
@@ -99,11 +99,11 @@ h1 {
         margin: 0;
     }
 
-    input[type='checkbox'] {
+    input[type="checkbox"] {
         display: none;
     }
 
-    input[type='checkbox']:checked+.menu-content {
+    input[type="checkbox"]:checked+.menu-content {
         transform: translateY(-60px);
     }
 }

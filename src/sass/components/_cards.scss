@@ -1,10 +1,14 @@
 .row {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 50px auto 0;
-
+    margin-bottom: 110px;
+    padding: 20px 20px 60px 20px;
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 200px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    border: 1px double rgba(255, 255, 255, 0.342);
 }

@@ -18,11 +18,9 @@ export const Home = () => {
         };
         fetchData();
     }, []);
-    console.log(data);
     return (
         <>
             <Cards games={data} />
-
         </>
     );
 };
