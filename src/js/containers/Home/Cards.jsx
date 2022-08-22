@@ -25,10 +25,12 @@ export const Cards = ({ games }) => {
   return (
     <>
       <Search search={search} change={searcher}></Search>
-      <div className='row'>
-        {listGame().map((game) => (
-          <Card key={game.id} game={game}></Card>
-        ))}
+      <div className="container-cards">
+        <div className='row'>
+          {listGame().map((game) => (
+            <Card key={game.id} game={game}></Card>
+          ))}
+        </div>
       </div>
       <Pagination page={page} setPage={setPage} maximo={maximo} />
 

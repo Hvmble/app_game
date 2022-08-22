@@ -3,9 +3,9 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-
+    padding: 20px 0px 50px 0px;
     button {
-        background-color: #242424;
+        background-color: #08c0d1;
         border: none;
         padding: 5px 10px;
         border-radius: 3px;
@@ -21,7 +21,7 @@
     }
 
     button[disabled] {
-        background-color: #474747;
+        background-color: #08c0d1;
         cursor: no-drop;
     }
 
@@ -29,7 +29,10 @@
         height: 30px;
         width: 50px;
         text-align: center;
-        border: 1px solid #242424;
+        border: 1px solid #08c0d1;
         border-radius: 3px;
     }
+}
+p{
+    color: $white;
 }
