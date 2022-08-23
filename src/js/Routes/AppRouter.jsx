@@ -6,7 +6,7 @@ import { Home } from '../pages/Home';
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter basename="/free_games/">
+    <BrowserRouter basename="/app_game/">
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/detalles/:id' element={<Detalles />}>
