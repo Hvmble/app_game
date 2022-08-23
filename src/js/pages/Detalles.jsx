@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Spinner } from "../components/Spinner";
+import { hearder_key } from "../data";
 
 export const Detalles = () => {
 	const { id } = useParams()
@@ -14,7 +15,7 @@ export const Detalles = () => {
 			fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`, {
 				headers: {
 					"X-RapidAPI-Key":
-						"c7a63a70fbmsh3383e931ba48d18p103542jsncd71051baeb8",
+						hearder_key,
 					"X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
 				},
 			})
