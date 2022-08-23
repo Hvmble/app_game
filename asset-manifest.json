@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/app_game/static/css/main.c59a97b6.css",
+    "main.js": "/app_game/static/js/main.96b8b3de.js",
+    "static/media/logo.png": "/app_game/static/media/logo.eeed8dc1b4a6a094c8ea.png",
+    "index.html": "/app_game/index.html",
+    "main.c59a97b6.css.map": "/app_game/static/css/main.c59a97b6.css.map",
+    "main.96b8b3de.js.map": "/app_game/static/js/main.96b8b3de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c59a97b6.css",
+    "static/js/main.96b8b3de.js"
+  ]
+}
