@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Spinner } from "../components/Spinner";
 import { Cards } from "../containers/Home/Cards";
 
 export const Home = () => {
     const [data, setData] = useState([]);
+    const [spinner, setSpinner] = useState(false);
     useEffect(() => {
         const fetchData = () => {
+            setSpinner(true)
             fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
                 headers: {
                     "X-RapidAPI-Key":
@@ -13,14 +16,19 @@ export const Home = () => {
                 },
             })
                 .then((response) => response.json())
-                .then((json) => setData(json))
+                .then((json) => {
+                    setTimeout(() => {
+						setData(json)
+						setSpinner(false);
+					}, 100)
+                })
                 .catch((error) => console.log(error));
         };
         fetchData();
     }, []);
     return (
         <>
-            <Cards games={data} />
+        {spinner ? <Spinner/> : <Cards games={data} /> }
         </>
     );
 };
