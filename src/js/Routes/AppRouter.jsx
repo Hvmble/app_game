@@ -6,8 +6,8 @@ import { Home } from '../pages/Home';
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter >
-      <Route basename="/app_game/">
+    <BrowserRouter  basename="/app_game/">
+      <Route>
         <Route path='/' element={<Home />} />
         <Route path='/detalles/:id' element={<Detalles />}>
         </Route>
