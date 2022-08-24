@@ -11,7 +11,7 @@ export const Detalles = () => {
 	}, 100)
 	return (
 		<>
-			{spinner ? <Spinner></Spinner> : games.map((game) => (
+			{spinner ? <Spinner/> : games.map((game) => (
 				<header className="container-details dark" key={game.id}>
 					<div className="text skew-text-tr">
 						<h1 className="headline">{game.title}</h1>
