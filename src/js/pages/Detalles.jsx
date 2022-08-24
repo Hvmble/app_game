@@ -8,7 +8,7 @@ export const Detalles = () => {
 	
 	setTimeout(() => {
 		setSpinner(false);
-	}, 50)
+	}, 100)
 	return (
 		<>
 			{spinner ? <Spinner></Spinner> : games.map((game) => (

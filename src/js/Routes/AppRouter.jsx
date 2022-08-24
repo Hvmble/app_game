@@ -7,11 +7,10 @@ import { Home } from '../pages/Home';
 export const AppRouter = () => {
   return (
     <BrowserRouter  basename="/app_game/">
-      <Route>
+      <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/detalles/:id' element={<Detalles />}>
-        </Route>
-      </Route>
+        <Route path='/detalles/:id' element={<Detalles />}/>
+      </Routes>
     </BrowserRouter>
   )
 }
