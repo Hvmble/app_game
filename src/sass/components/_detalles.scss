@@ -77,7 +77,6 @@ aside {
 	.container-details {
 		height: 700px;
 		position: relative;
-		z-index: -1;
 	}
 
 	.skew-tl::after {
@@ -174,14 +173,19 @@ header p {
 	margin-bottom: 0.3em;
 }
 
-header .tag {
+.tag {
 	background-color: #00ffea;
 	padding: 0.2em 1.2em;
 	color: var(--color-dark);
-	transform: skewX(-15deg);
+	border-radius: 20%;
 	display: inline-block;
 	font-size: 0.8rem;
+	text-align: center;
+	margin-top: 0.5rem;
+	cursor: pointer;
+	
 }
+
 
 /* ============== */
 /* HEADER DESKTOP */
@@ -249,12 +253,13 @@ header .tag {
 		font-family: "Raleway", sans-serif;
 	}
 
-	header .tag {
+header button .tag {
 		background-color: #00ffea;
 		padding: 0.2em 1.5em;
 		color: var(--color-dark);
-		transform: skewX(-15deg);
+		border-radius: 1rem solid ;
 		display: inline-block;
+		
 	}
 
 	header svg {

@@ -6,13 +6,12 @@ import { Home } from '../pages/Home';
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter basename="/app_game/">
-      <Routes>
+    <BrowserRouter >
+      <Route basename="/app_game/">
         <Route path='/' element={<Home />} />
         <Route path='/detalles/:id' element={<Detalles />}>
-          
         </Route>
-      </Routes>
+      </Route>
     </BrowserRouter>
   )
 }
